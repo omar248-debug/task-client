@@ -20,9 +20,6 @@ const Header = ({ data }: Readonly<IHeader | any>) => {
 
   if (!data) return null;
   const { logo, navigation, cta } = data;
-  useEffect(() => {
-    dispatch(setLang(lang == "en" ? "ar" : "en"));
-  }, []);
   return (
     <header className='flex items-center justify-between bg-primary px-10 py-5 text-white relative'>
       {/* Logo */}

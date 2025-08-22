@@ -4,6 +4,8 @@ export interface LangState {
   lang: "ar" | "en";
 }
 
+
+
 const initialState: LangState = {
   lang: "en"
 };
