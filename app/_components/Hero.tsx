@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { HeroSection } from "../types";
-import { getStrapiURL } from "../utils/gatStrapiUrl";
+import { getStrapiURL } from "../../utils/gatStrapiUrl";
 import Link from "next/link";
-import {  useSelector } from "react-redux";
-import { RootState } from "../featured/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../featured/store";
 
 const Hero = ({
   heading,
@@ -13,13 +13,13 @@ const Hero = ({
   cta,
 }: Readonly<HeroSection>) => {
   const lang = useSelector((state: RootState) => state.lang.lang);
-console.log(getStrapiURL(), personImage.url);
+  console.log(getStrapiURL(), personImage.url);
 
   return (
     <section
-      className='h-screen w-full flex gap-19 items-center px-17'      
+      className='h-screen w-full flex gap-19 items-center px-17'
       style={{ backgroundImage: `url(${bgImage.url})` }}
-      dir={lang == 'ar' ? "rtl" : 'ltr'}
+      dir={lang == "ar" ? "rtl" : "ltr"}
     >
       <div className='w-[700px]'>
         <h1 className='font-bold text-base md:text-[40px] text-white mb-9'>

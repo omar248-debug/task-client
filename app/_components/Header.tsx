@@ -9,8 +9,8 @@ import SearchBar from "./SearchBar";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../featured/store";
-import { setLang } from "../featured/lang/languageSlice";
+import { RootState } from "../../featured/store";
+import { setLang } from "../../featured/lang/languageSlice";
 
 const Header = ({ data }: Readonly<IHeader | any>) => {
   const lang = useSelector((state: RootState) => state.lang.lang);
@@ -21,7 +21,7 @@ const Header = ({ data }: Readonly<IHeader | any>) => {
   if (!data) return null;
   const { logo, navigation, cta } = data;
   return (
-    <header className='flex items-center justify-between bg-primary px-10 py-5 text-white relative'>
+    <header className='flex items-center justify-between bg-primary px-10 py-5 text-white relative z-50'>
       {/* Logo */}
       <Link href={"/"}>
         <Image

@@ -1,4 +1,4 @@
-import { getPageBySlug } from "@/app/data/loaders";
+import { getPageBySlug } from "@/data/loaders";
 import { AllServices } from "@/app/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -25,7 +25,7 @@ async function loader(slug: string) {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const {slug} = (await params);
+  const { slug } = await params;
   const { blocks, info } = await loader(slug);
 
   return (

@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Client } from "../types";
+import { Client } from "../../types";
 
 type Props = {
   clients: Client[];

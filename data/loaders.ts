@@ -44,9 +44,9 @@ export const getHomePage = async () => {
   const path = "/api/home-page";
   const BASE_URL = getStrapiURL();
   const url = new URL(path, BASE_URL);
-  url.search = `${query}`
-  if(localStorage.getItem('lang') === "ar" ){
-    url.search += `&locale=${localStorage.getItem('lang')}`
+  url.search = `${query}`;
+  if (localStorage.getItem("lang") === "ar") {
+    url.search += `&locale=${localStorage.getItem("lang")}`;
   }
   return await fetchAPI(url.href, { method: "GET" });
 };
@@ -91,8 +91,8 @@ const pageBySlugQuery = (slug: string) =>
         on: {
           "blocks.sublink-services": {
             populate: {
-              pointsLink: true
-            }
+              pointsLink: true,
+            },
           },
         },
       },
